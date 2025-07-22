@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: onco-intellect
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    runtime: python
+    region: oregon  # or 'frankfurt' if you are in Europe
+    plan: free
+    branch: main
+    autoDeploy: true
